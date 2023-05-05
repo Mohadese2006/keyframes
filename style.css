@@ -1,74 +1,228 @@
-
-/* !!!!!1111111 */
-body{
-    background-color: black;
+/* general */
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.box{
- position: relative;
- width: 100px;
- height: 100px;
-margin: 70px;
-padding: 20px;
- background-color: red;   
- animation-name: movebox;
- animation-duration: 7s;
- animation-iteration-count: infinite;
+/* end general */
+
+/* start body*/
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+  background-color: #000;
+}
+/* end body */
+
+/* start main circle */
+.main-circle {
+  position: relative;
+  width: 1100px;
+  height: 1100px;
 }
 
-@keyframes movebox{
-    0%{
-        background-color: red;
-        top: 0;
-        left: 0;
-        transform: rotate(0);
-    }
-    25%{
-        background-color: rgb(82, 44, 255);
-        top: 0;
-        left: 400px; 
-        border-radius: 0;
-        transform: rotate(0);
-    }
-    30%{
-        background-color: rgb(82, 44, 255);
-        top: 0;
-        left: 400px; 
-        border-radius: 500px; 
-        transform: rotate(0);
-    }
+/* end main circle   */
 
-    50%{
-        background-color: rgb(54, 131, 24);
-        top: 400px;
-        left: 400px;
-       border-radius: 0;
-       transform: rotate(3turn);
-    }
-    75%{
-        background-color: rgb(235, 255, 50);
-        top: 400px;
-        left: 0;
-        transform: rotate(0);
-    }
-    80%{
-        background-color: rgb(235, 255, 50);
-        top: 400px;
-        left: 0;
-        transform: rotate(0);
-        border-radius: 0;
-    }
-    85%{
-        background-color: rgb(235, 255, 50);
-        top: 400px;
-        left: 0;
-        transform: rotate(0);
-        border-radius: 500px;
-    }
-    99%{
-        background-color: rgb(255, 0, 0);
-        top: 0;
-        left: 0;
-        transform: rotate(0);
-    }
+/* start main circle:before */
+.main-circle::before {
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  right: 100px;
+  bottom: 100px;
+  border: 20px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 50px red, inset 0 0 50px blue;
+  -webkit-box-reflect: below 10px
+    linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.133));
+  animation: circle 7s linear infinite;
 }
+
+/* end main circle:before */
+
+/* start container */
+.container {
+  background-image: url(images/back4.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 550px;
+  height: 550px;
+  border: 5px solid rgb(8, 51, 143);
+  box-shadow: 3px 3px 20px rgb(255, 255, 255), 3px 3px 40px rgb(11, 31, 214),
+    3px 10px 60px rgb(14, 255, 14), 3px 3px 30px rgb(255, 255, 255);
+  margin: 0 auto;
+  margin-top: 300px;
+
+  animation: moraba 10s linear infinite;
+}
+/* end container */
+@keyframes moraba {
+  0% {
+    box-shadow: 0 0 50px rgb(23, 233, 16), inset 0 0 50px blue;
+    filter: hue-rotate(0deg);
+  }
+  20% {
+    box-shadow: 0 0 70px rgb(37, 233, 12), inset 0 0 70px blue;
+    filter: hue-rotate(0deg);
+  }
+  40% {
+    box-shadow: 0 0 80px rgb(20, 16, 243), inset 0 0 80px blue;
+    filter: hue-rotate(0deg);
+  }
+  60% {
+    box-shadow: 0 0 90px red, inset 0 0 90px blue;
+    filter: hue-rotate(0deg);
+  }
+  80% {
+    box-shadow: 0 0 100px rgb(181, 228, 14), inset 0 0 100px blue;
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    box-shadow: 0 0 50px rgb(255, 255, 255), inset 0 0 50px blue;
+    filter: hue-rotate(10deg);
+  }
+}
+/* start keyframes circle */
+@keyframes circle {
+  0% {
+    box-shadow: 0 0 50px red, inset 0 0 50px blue;
+    filter: hue-rotate(0deg);
+  }
+  20% {
+    box-shadow: 0 0 60px red, inset 0 0 60px blue;
+  }
+  40% {
+    box-shadow: 0 0 80px red, inset 0 0 80px blue;
+  }
+  60% {
+    box-shadow: 0 0 90px red, inset 0 0 90px blue;
+  }
+  80% {
+    box-shadow: 0 0 100px red, inset 0 0 100px blue;
+  }
+  100% {
+    ox-shadow: 0 0 50px red, inset 0 0 50px blue;
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* end keyframes circle */
+
+/* start keyframes  movebox */
+@keyframes movebox {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+    transform: none;
+  }
+
+  3% {
+    background-color: rgb(243, 16, 16);
+    border-radius: 0;
+    transform: none;
+  }
+  4% {
+    background-color: blue;
+    border-radius: 0;
+    transform: none;
+  }
+  20% {
+    background-color: rgb(10, 48, 221);
+    border-radius: 0;
+    transform: none;
+  }
+
+  25% {
+    background-color: rgb(18, 32, 224);
+    left: 438px;
+    top: 0px;
+    border-radius: 500px;
+    transform: none;
+  }
+  26% {
+    background-color: blue;
+    border-radius: 500px;
+    transform: none;
+  }
+  28% {
+    background-color: green;
+    border-radius: 0px;
+    transform: none;
+  }
+  49% {
+    background-color: green;
+    border-radius: 0;
+    transform: none;
+  }
+  50% {
+    background-color: rgb(60, 216, 21);
+    left: 438px;
+    top: 438px;
+
+    border-radius: 0;
+  }
+  55% {
+    left: 350px;
+    top: 350px;
+    border-radius: 0;
+    transform: rotatex(100);
+  }
+  65% {
+    top: 438px;
+    left: 300px;
+    border-radius: 0;
+    transform: rotatey(200deg);
+  }
+  69% {
+    left: 250px;
+    top: 350px;
+    border-radius: 0;
+    transform: rotatez(300deg);
+  }
+
+  74% {
+    left: 0px;
+    top: 438px;
+    border-radius: 50%;
+  }
+
+  75% {
+    background-color: rgb(211, 214, 12);
+    left: 0px;
+    top: 438px;
+    transform: none;
+    border-radius: 50%;
+  }
+
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+    transform: none;
+  }
+}
+/* end container */
+/* start main */
+.main {
+  width: 100px;
+  height: 100px;
+  box-shadow: 3px 3px 100px rgb(0, 0, 0);
+  position: relative;
+  background-color: rgb(255, 0, 0);
+  display: block;
+}
+/* end main */
+/* start container hover >main */
+.main-circle > .container:hover .main {
+  animation-name: movebox;
+  animation-duration: 10s;
+  animation-iteration-count: 3;
+}
+
+/* end container hover >main */
