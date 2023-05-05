@@ -245,28 +245,99 @@ body {
 /* end two */
 /* start amir profile */
 .amir-pro {
-  background-image: url(images/amir.gif);
+  background: url(images/amir.gif);
   background-repeat: no-repeat;
   background-size: 100%;
+  position: relative;
   width: 130%;
   height: 240%;
 }
 /* end amir profile */
 /* start moha profile */
 .moha-pro {
-  background-image: url(images/moha.gif);
+  background: url(images/moha.gif);
   background-repeat: no-repeat;
   background-size: 100%;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 /* end moha profile */
 /* start amir and moha p */
-.one p,
+
 .two p {
+  border: 7px solid white;
+  position: absolute;
   color: white;
   text-align: center;
-  font-size: 50px;
-
+  font-size: 90px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  box-shadow: 2px 3px 10px rgb(255, 255, 255), 2px 3px 20px rgb(2, 196, 255),
+    2px 3px 30px rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  animation: profile 0.1s linear infinite;
 }
+.one p {
+  border: 7px solid rgb(255, 255, 255);
+  position: absolute;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 90px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  box-shadow: 2px 3px 10px rgb(255, 255, 255), 2px 3px 20px rgb(2, 196, 255),
+    2px 3px 30px rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  animation: profile2 0.1s linear infinite;
+}
+
 /* end amir and moha p */
+/*  start key frames */
+@keyframes profile {
+  0% {
+    box-shadow: 0 0 10px rgb(255, 255, 255), inset 0 0 20px rgb(255, 255, 255);
+    filter: hue-rotate(0deg);
+  }
+  30% {
+    box-shadow: 0 0 20px rgb(255, 255, 255), inset 0 0 30px rgb(253, 255, 254);
+    filter: hue-rotate(0deg);
+  }
+  60% {
+    box-shadow: 0 0 30px rgb(255, 255, 255), inset 0 0 40px rgb(255, 255, 255);
+    filter: hue-rotate(0deg);
+  }
+  80% {
+    box-shadow: 0 0 40px rgb(255, 255, 255), inset 0 0 50px rgb(255, 255, 255);
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    box-shadow: 0 0x 10px rgb(255, 255, 255), inset 0 0 20px rgb(255, 255, 255);
+    filter: hue-rotate(360deg);
+  }
+}
+/* end keyframes */
+/* start keyframes profile2 */
+@keyframes profile2 {
+  0% {
+    box-shadow: 0 0 10px rgb(255, 255, 255), inset 0 0 20px rgb(255, 255, 255);
+    filter: hue-rotate(0deg);
+  }
+  30% {
+    box-shadow: 0 0 20px rgb(255, 255, 255), inset 0 0 30px rgb(253, 255, 254);
+    filter: hue-rotate(0deg);
+  }
+  60% {
+    box-shadow: 0 0 30px rgb(255, 255, 255), inset 0 0 40px rgb(255, 255, 255);
+    filter: hue-rotate(0deg);
+  }
+  80% {
+    box-shadow: 0 0 40px rgb(255, 255, 255), inset 0 0 50px rgb(255, 255, 255);
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    box-shadow: 0 0x 10px rgb(255, 255, 255), inset 0 0 20px rgb(255, 255, 255);
+    filter: hue-rotate(360deg);
+  }
+}
+/* end keyframes profile 2 */
